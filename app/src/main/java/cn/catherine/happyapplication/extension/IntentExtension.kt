@@ -9,15 +9,15 @@ import android.os.Bundle
  *
  * 创建能跳转的Activity
  */
-inline fun <reified T> Activity.intent() {
+inline fun <reified T : Activity> Activity.intent() {
     this.intent<T>(null)
 }
 
-inline fun <reified T> Activity.intent(bundle: Bundle?) {
+inline fun <reified T : Activity> Activity.intent(bundle: Bundle?) {
     this.intent<T>(bundle, false)
 }
 
-inline fun <reified T> Activity.intent(bundle: Bundle?, isFinish: Boolean) {
+inline fun <reified T : Activity> Activity.intent(bundle: Bundle?, isFinish: Boolean) {
     val intent = Intent()
     bundle?.let {
         intent.putExtras(bundle)
