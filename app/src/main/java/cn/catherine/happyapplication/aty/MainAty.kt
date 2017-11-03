@@ -5,9 +5,16 @@ import cn.catherine.happyapplication.R
 import cn.catherine.happyapplication.base.BaseAty
 
 class MainAty : BaseAty() {
+    override fun layoutRes(): Int = R.layout.aty_main
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.aty_main)
+    override fun getArgs(bundle: Bundle) {
     }
+
+    override fun initView() {
+    }
+
+    override fun setListener() {
+    }
+
+
 }
