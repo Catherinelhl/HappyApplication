@@ -2,9 +2,7 @@ package cn.catherine.happyapplication.base
 
 import android.app.Activity
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 
 /**
@@ -27,24 +25,4 @@ abstract class BaseAty : AppCompatActivity() {
     abstract fun getArgs(bundle: Bundle)
     abstract fun initView()
     abstract fun setListener()
-
-
-    protected fun startActivity(cls: Class<*>?) {
-        startActivity(cls, null, false)
-
-    }
-
-    protected fun startActivity(cls: Class<*>?, bundle: Bundle) {
-        startActivity(cls, bundle, false)
-    }
-
-    protected fun startActivity(cls: Class<*>?, bundle: Bundle?, isFinish: Boolean) {
-        if (cls == null || activity.isFinishing) return
-        val intent = Intent()
-        if (bundle != null)
-            intent.putExtras(bundle)
-        intent.setClass(activity, cls)
-        startActivity(intent)
-        if (isFinish) finish()
-    }
 }
