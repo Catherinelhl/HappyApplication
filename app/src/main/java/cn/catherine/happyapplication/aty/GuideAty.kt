@@ -19,9 +19,6 @@ class GuideAty : BaseAty() {
     }
 
     override fun setListener() {
-        tv_guide.setOnClickListener {
-            this.intent<MainAty>()
-        }
+        tv_guide.setOnClickListener { this.intent<MainAty>() }
     }
-
 }
