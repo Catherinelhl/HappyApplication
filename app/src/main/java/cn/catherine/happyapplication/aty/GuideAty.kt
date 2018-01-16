@@ -48,7 +48,7 @@ class GuideAty : BaseAty() {
     }
 
     private fun initMediaPlayer() {
-        fd = assets.openFd("Catherine.mp3")
+        fd = assets.openFd(getString(R.string.music_name))
         mediaPlayer.setDataSource(fd.fileDescriptor, fd.startOffset, fd.length)
         mediaPlayer.prepare()
         mediaPlayer.isLooping = true
