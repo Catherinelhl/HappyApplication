@@ -1,4 +1,4 @@
-package cn.catherine.happyapplication.extend
+package cn.catherine.happyapplication.utills
 
 import android.util.Log
 
@@ -17,7 +17,7 @@ object L {
 
     fun line(str: String) {
         var className = getMethodNames(Thread.currentThread().stackTrace)
-        Log.i(TAG, " $className$line$str")
+        Log.i(TAG, " $className${line}$str")
 
     }
 
