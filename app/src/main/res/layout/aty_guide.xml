@@ -9,11 +9,12 @@
         android:id="@+id/ll_header"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            style="@style/marquee_text"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_margin="10dp"
@@ -26,8 +27,10 @@
     <ImageView
         android:id="@+id/iv_bg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/ll_header" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_header"
+        android:scaleType="centerCrop"
+        android:src="@drawable/one" />
 
     <ImageView
         android:id="@+id/iv_start_music"

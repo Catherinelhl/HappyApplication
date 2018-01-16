@@ -23,11 +23,11 @@ class GuideAty : BaseAty() {
     }
 
     override fun initView() {
-        Glide.with(context)
-                .load("http://b199.photo.store.qq.com/psbe?/V13feNMj3t71kv/HcLZlTKEONf04rJs29Y1RAPyCB1kR3nugi*pQF11S8ELBTLqU5eeopsHR5HffUSO/b/dMcAAAAAAAAA&bo=uALrAgAAAAAFB3c!&rf=viewer_4")
-                .placeholder(R.drawable.one)
-                .crossFade()
-                .into(iv_bg)
+//        Glide.with(context)
+//                .load("http://b199.photo.store.qq.com/psbe?/V13feNMj3t71kv/HcLZlTKEONf04rJs29Y1RAPyCB1kR3nugi*pQF11S8ELBTLqU5eeopsHR5HffUSO/b/dMcAAAAAAAAA&bo=uALrAgAAAAAFB3c!&rf=viewer_4")
+//                .placeholder(R.drawable.one)
+//                .crossFade()
+//                .into(iv_bg)
         initMediaPlayer()
         initAnimation()
         //this.intent<MainAty>()
