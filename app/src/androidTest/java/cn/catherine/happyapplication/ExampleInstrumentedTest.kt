@@ -2,6 +2,7 @@ package cn.catherine.happyapplication
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
+import junit.textui.TestRunner
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -21,4 +22,9 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getTargetContext()
         assertEquals("cn.catherine.happyapplication", appContext.packageName)
     }
+
+}
+
+fun main(args: Array<String>) {
+    var testRunner=TestRunner()
 }

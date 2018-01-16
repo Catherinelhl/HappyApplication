@@ -4,6 +4,7 @@ import android.os.Bundle
 import cn.catherine.happyapplication.R
 import cn.catherine.happyapplication.base.BaseAty
 import cn.catherine.happyapplication.extension.intent
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.aty_guide.*
 
 /**
@@ -16,9 +17,14 @@ class GuideAty : BaseAty() {
     }
 
     override fun initView() {
+        Glide.with(context)
+                .load("http://b199.photo.store.qq.com/psbe?/V13feNMj3t71kv/HcLZlTKEONf04rJs29Y1RAPyCB1kR3nugi*pQF11S8ELBTLqU5eeopsHR5HffUSO/b/dMcAAAAAAAAA&bo=uALrAgAAAAAFB3c!&rf=viewer_4")
+                .placeholder(R.mipmap.ic_launcher)
+                .crossFade()
+                .into(iv_bg)
     }
 
     override fun setListener() {
-        tv_guide.setOnClickListener { this.intent<MainAty>() }
+        btn_start_music.setOnClickListener { this.intent<MainAty>() }
     }
 }
