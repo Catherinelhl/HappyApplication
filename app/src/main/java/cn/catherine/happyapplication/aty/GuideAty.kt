@@ -25,6 +25,7 @@ class GuideAty : BaseAty() {
                 .subscribe {
                     if (it == 3L) {
                         this.intent<MainAty>()
+                        finish()
                     }
                 }
     }
