@@ -43,6 +43,7 @@ class MainAty : BaseAty() {
 
         }
     }
+
     private fun initMediaPlayer() {
         fd = assets.openFd(getString(R.string.music_name))
         mediaPlayer.setDataSource(fd.fileDescriptor, fd.startOffset, fd.length)
@@ -55,6 +56,13 @@ class MainAty : BaseAty() {
         var lin = LinearInterpolator()
         animation.interpolator = lin
         iv_start_music.animation = animation
+    }
+
+
+    override fun onDestroy() {
+        mediaPlayer.stop()
+        mediaPlayer.release()
+        super.onDestroy()
     }
 
 }
