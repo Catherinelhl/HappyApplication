@@ -26,9 +26,10 @@
 
     <ImageView
         android:id="@+id/iv_bg"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ll_header"
+        android:layout_centerInParent="true"
         android:scaleType="centerCrop"
         android:src="@drawable/one" />
 
@@ -40,5 +41,13 @@
         android:layout_below="@+id/ll_header"
         android:layout_margin="10dp"
         app:srcCompat="@drawable/ic_start_music_d" />
+
+    <Button
+        android:id="@+id/btn_go_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_icon_go_on" />
 
 </RelativeLayout>

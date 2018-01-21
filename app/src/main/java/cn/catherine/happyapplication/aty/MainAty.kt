@@ -8,12 +8,18 @@ import android.view.animation.LinearInterpolator
 import cn.catherine.happyapplication.R
 import cn.catherine.happyapplication.base.BaseAty
 import kotlinx.android.synthetic.main.aty_main.*
+import java.util.*
 
 class MainAty : BaseAty() {
 
     //需将资源文件放在assets文件夹
     private lateinit var fd: AssetFileDescriptor
     private val mediaPlayer = MediaPlayer()
+    private val allBgImage = arrayOf(R.drawable.one, R.drawable.two, R.drawable.three,
+            R.drawable.four, R.drawable.five, R.drawable.six, R.drawable.seven,
+            R.drawable.eight, R.drawable.nine, R.drawable.ten, R.drawable.even, R.drawable.twen,
+            R.drawable.thr)
+
     override fun layoutRes(): Int = R.layout.aty_main
 
     override fun getArgs(bundle: Bundle) {
@@ -41,6 +47,11 @@ class MainAty : BaseAty() {
 
             }
 
+        }
+
+        btn_go_on.setOnClickListener {
+            var index = (Math.random() * allBgImage.size).toInt()
+            iv_bg.setImageResource(allBgImage[index])
         }
     }
 
