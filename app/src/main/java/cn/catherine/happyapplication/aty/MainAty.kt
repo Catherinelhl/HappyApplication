@@ -8,7 +8,6 @@ import android.view.animation.LinearInterpolator
 import cn.catherine.happyapplication.R
 import cn.catherine.happyapplication.base.BaseAty
 import kotlinx.android.synthetic.main.aty_main.*
-import java.util.*
 
 class MainAty : BaseAty() {
 
