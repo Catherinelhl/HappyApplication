@@ -47,7 +47,7 @@ fun <T> T.blur(isScale: Boolean): Bitmap {
 
     scriptIntrinsicBlur.setInput(input)
 
-    scriptIntrinsicBlur.setRadius(if (isScale) 5.0f else 25.0f)
+    scriptIntrinsicBlur.setRadius(5.0f)
     scriptIntrinsicBlur.forEach(output)
     output.copyTo(bitmap)
     renderScript.destroy()

@@ -19,7 +19,7 @@ class MainAty : BaseAty() {
     //需将资源文件放在assets文件夹
     private lateinit var fd: AssetFileDescriptor
     private val mediaPlayer = MediaPlayer()
-    private  lateinit var allBgImage: MutableList<Bitmap>
+    private lateinit var allBgImage: MutableList<Bitmap>
 
     override fun layoutRes(): Int = R.layout.aty_main
 
@@ -34,7 +34,7 @@ class MainAty : BaseAty() {
 //                .crossFade()
 //                .into(iv_bg)
 
-        allBgImage=this.getAssetDrawable()
+        allBgImage = this.getAssetDrawable()
         initMediaPlayer()
         initAnimation()
 
